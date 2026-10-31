@@ -1,0 +1,25 @@
+# macOS
+.DS_Store
+
+# Editor
+*.swp
+*~
+
+# Test logs
+test/docker/*.log
+
+# Agent & Skills
+.agents/
+skills-lock.json
+
+# Node & Dashboard Build
+node_modules/
+dashboard/node_modules/
+dashboard/dist/
+dashboard/.vite/
+extracted_dashboard/
+.env
+.env.local
+DESIGN_SYSTEM.md
+
+

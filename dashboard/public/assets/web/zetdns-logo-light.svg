@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">ZetDNS — DNS Trust+ Nusantara</title>
+  <desc id="desc">Adaptive ZetDNS logo for light and dark web themes.</desc>
+
+  <defs>
+    <linearGradient id="zetGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1769E0"/>
+      <stop offset="52%" stop-color="#08A9E8"/>
+      <stop offset="100%" stop-color="#14C8C8"/>
+    </linearGradient>
+    <linearGradient id="orbitGradient" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0D5FD4"/>
+      <stop offset="100%" stop-color="#13C8C8"/>
+    </linearGradient>
+    <filter id="softGlow" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    :root {
+      --zet-text: #EAF6FF;
+      --dns-text: #32D8DC;
+      --tagline: #C8D8E5;
+      --network: #45B7FF;
+      --islands: #66D6E8;
+      --outline: rgba(255,255,255,.16);
+    }
+
+
+    .brand-zet { fill: var(--zet-text); }
+    .brand-dns { fill: var(--dns-text); }
+    .tagline { fill: var(--tagline); }
+    .network { stroke: var(--network); }
+    .islands { fill: var(--islands); }
+    .outline { stroke: var(--outline); }
+  </style>
+
+  <!-- ICON -->
+  <g transform="translate(54 47)">
+    <!-- subtle orbit glow -->
+    <ellipse cx="154" cy="149" rx="143" ry="73" fill="none" stroke="url(#orbitGradient)" stroke-width="18" opacity=".12"/>
+
+    <!-- network nodes -->
+    <g class="network" fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M31 70 L79 60 L111 24 M79 60 L64 31 M79 60 L104 63"/>
+      <circle cx="31" cy="70" r="13"/>
+      <circle cx="64" cy="31" r="10"/>
+      <circle cx="111" cy="24" r="10"/>
+      <circle cx="104" cy="63" r="9"/>
+    </g>
+
+    <!-- stylized Z -->
+    <path d="M46 50 H262 L214 99 H141 L89 125 H190 L263 87 L221 144 L99 210 H250 L205 258 H37 L72 215 L167 164 H51 L94 117 L177 78 H35 Z"
+          fill="url(#zetGradient)" class="outline" stroke-width="2"/>
+
+    <!-- orbit swoosh -->
+    <path d="M13 149 C21 110 91 84 171 86 C238 88 291 111 298 143 C306 176 255 209 181 224 C99 240 26 224 9 185 C2 170 3 158 13 149 Z"
+          fill="none" stroke="url(#orbitGradient)" stroke-width="13" stroke-linecap="round" opacity=".94"/>
+    <path d="M286 120 C312 145 299 176 259 199" fill="none" stroke="#1FD1D2" stroke-width="6" stroke-linecap="round" opacity=".7"/>
+
+    <!-- abstract Nusantara islands -->
+    <g class="islands" opacity=".78">
+      <path d="M72 185 l22 -8 18 5 6 9 -17 7 -25 -3z"/>
+      <path d="M106 202 l34 -5 18 7 -4 10 -39 3 -15 -7z"/>
+      <path d="M157 184 l30 -6 22 5 9 8 -19 6 -29 -3z"/>
+      <path d="M194 204 l27 -5 17 6 -8 9 -27 1z"/>
+      <path d="M232 180 l21 -3 14 7 -7 7 -25 1z"/>
+      <circle cx="150" cy="220" r="4"/>
+      <circle cx="175" cy="214" r="3.5"/>
+      <circle cx="244" cy="216" r="3"/>
+    </g>
+  </g>
+
+  <!-- WORDMARK -->
+  <g transform="translate(390 0)">
+    <text x="0" y="183" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif"
+          font-size="111" font-weight="800" letter-spacing="-5" class="brand-zet">Zet</text>
+    <text x="177" y="183" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif"
+          font-size="111" font-weight="800" letter-spacing="-4" class="brand-dns">DNS</text>
+
+    <text x="5" y="244" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif"
+          font-size="42" font-weight="650" letter-spacing=".1" class="tagline">DNS Trust+ Nusantara</text>
+  </g>
+</svg>

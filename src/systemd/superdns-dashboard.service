@@ -1,0 +1,18 @@
+[Unit]
+Description=SuperDNS Custom TypeScript Dashboard (Reverse Proxy)
+After=network.target dnstrust-admin.service
+Wants=dnstrust-admin.service
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/usr/local/share/superdns/dashboard
+Environment=PORT=9080
+Environment=CORE_BACKEND_URL=http://127.0.0.1:9081
+ExecStart=/usr/bin/npm start
+Restart=on-failure
+RestartSec=3s
+
+[Install]
+WantedBy=multi-user.target
+
